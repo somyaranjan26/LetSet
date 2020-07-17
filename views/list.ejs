@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LetSet is a web app created using Node">
-    <meta name="author" content="Somyaranjan Rout">
-    <meta name="generator" content="LetSet v1.0">
-    <title>LetSet</title>
-    <link rel="stylesheet" src="style.css">
-</head>
-<body>
-    <div class="box">
-        <h1> <%= KindOfDay %> </h1>
-    </div>
+<%- include("header") %>
+
+<div id="heading" class="box">
+    <h1> <%= ListType %> </h1>
+</div>
 
     <div class="box">
         <% for( var i=0; i<newListItems.length; i++) { %>
@@ -24,8 +14,8 @@
 
         <form class="item" method="POST" action="/">
             <input type="text" name="todo" placeholder="Add ToDo" autocomplete="off">
-            <button type="submit">+</button>
+            <button type="submit" name="list" value = "<%= ListType %>">+</button>
         </form>
     </div>
-</body>
-</html>
+
+<%- include("footer") %>
