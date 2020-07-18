@@ -1,21 +1,30 @@
 <%- include("header") %>
 
-<div id="heading" class="box">
+<div id="heading" class="info">
     <h1> <%= ListType %> </h1>
 </div>
 
-    <div class="box">
-        <% for( var i=0; i<newListItems.length; i++) { %>
-            <div class="item">
-                <input type="checkbox">
-                <p><%=newListItems[i]%></p>
-            </div>
-        <% } %>
-
-        <form class="item" method="POST" action="/">
-            <input type="text" name="todo" placeholder="Add ToDo" autocomplete="off">
-            <button type="submit" name="list" value = "<%= ListType %>">+</button>
-        </form>
+    <div class="scroll">
+        <div class="box">
+            <% for( var i=0; i<newListItems.length; i++) { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%=newListItems[i]%></p>
+                </div>
+            <% } %>
+        
+            <form class="item" method="POST" action="/">
+                <input type="text" name="todo" placeholder="Add ToDo" autocomplete="off">
+                <button type="submit" name="list" value = "<%= ListType %>">+</button>
+            </form>  
+        </div>         
     </div>
 
+<div id="ListButton" class="info">
+    <% if(ListType === "Work List") {%>
+        <a href="/"><p class="btn"> ⇠ Todo List </p> </a>
+    <% } else { %>
+        <a href="/work"><p class="btn">Work List ⇢ </p></a>
+    <% } %> 
+</div>
 <%- include("footer") %>

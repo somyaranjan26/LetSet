@@ -1,8 +1,9 @@
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(115deg, #f87e7e 50%, #ffd7d7 50%);
-  min-height: 100vh;
+  min-height: 1000px;
   font-family: 'helvetica neue';
+  overflow: hidden;
 }
 
 h1 {
@@ -11,9 +12,16 @@ h1 {
   text-shadow: 2px 2px #ca2b2b;
 }
 
-.box {
+.info {
   max-width: 400px;
   margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+.box {
+  max-width: 400px;
   background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
@@ -24,8 +32,28 @@ h1 {
   text-align: center;
 }
 
+#ListButton {
+  background-color: #fad3d3;
+  text-align: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #f87373;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 2px 2px #dbabab;
+}
+
+.scroll {
+  overflow: scroll;
+  width: 400px;
+  height: 340px;
+  margin: 50px auto;
+}
+
 .item {
-  min-height: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #F1F1F1;
@@ -94,5 +122,9 @@ footer {
   /* color: white; */
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
 }

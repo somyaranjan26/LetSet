@@ -23,7 +23,7 @@ app.get("/", function(req, res){
 app.post("/", (req, res) => {
     let item = req.body.todo 
 
-    if(req.body.list === 'Work Day') {
+    if(req.body.list === 'Work List') {
         if(item === "") {
             res.redirect("/work")
         } else {
@@ -43,7 +43,7 @@ app.post("/", (req, res) => {
 
 app.get("/work", (req, res) => {
     year = date.getYear()        // For Footer 
-    res.render("list", {ListType: "Work Day", newListItems: workItem, Year: year})
+    res.render("list", {ListType: "Work List", newListItems: workItem, Year: year})
 })
 
 app.listen(3000, function(){
